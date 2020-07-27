@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-particles-js";
 import "./App.css";
 import Web3 from "web3";
