@@ -1,12 +1,11 @@
-import React, {Component} from 'react';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Logo from './components/Header/Logo';
 import Language from './components/Header/Languages';
+import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-particles-js";
 import "./App.css";
-
-
 import Web3 from "web3";
 import MLM from "./contracts/MLM.json";
 
@@ -82,7 +81,7 @@ class App extends Component{
 
     <div className="main">
       
-       <Logo></Logo>
+     
 
     <div className="App">
 
@@ -158,6 +157,7 @@ params={{
     >
 
     </Particles>
+    <div className="text"> <Logo></Logo></div>
     <div className="text">
         <h1>WELCOME TO DAPP</h1>
     <p>Total Users in the system {this.state.totalUsers}</p>
