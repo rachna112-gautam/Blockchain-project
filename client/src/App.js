@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-particles-js";
 import "./App.css";
+
 import Web3 from "web3";
 import MLM from "./contracts/MLM.json";
+
 
 class App extends Component{
 
@@ -159,6 +161,7 @@ params={{
         >Register
         </button>
     </div>
+        </div>
     </div>
   );
     }

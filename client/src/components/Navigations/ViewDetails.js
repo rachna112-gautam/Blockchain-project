@@ -2,7 +2,9 @@ import React from 'react';
 
 const ViewDetails = () => {
     return (
-        <div></div>
+        <div>
+            <button type="button" class="btn btn-info">Info</button>
+        </div>
     )
 }
 

@@ -1,10 +1,17 @@
-
-
-
 .text{
   position: absolute;
   text-align: center;
   color: white;
   top: 40%;
   width: 100%;
+}
+
+.ul-list{
+  list-style: none;
+  display: flex;
+}
+
+.list{
+  margin: 10px;
+
 }
