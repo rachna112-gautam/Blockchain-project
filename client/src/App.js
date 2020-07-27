@@ -1,12 +1,15 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Logo from './components/Header/Logo';
+import Language from './components/Header/Languages';
+
 
 
 function App() {
   return (
-    <div className="container text-center">
-       <h1 className="text-center">Welcome</h1>
-       <button className="btn btn-outline-success">Click here</button>
+    <div className="main">
+      
+       <Logo></Logo>
     </div>
   );
 }
