@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-particles-js";
 import "./App.css";
+import Container from "./components/Navigations/Container";
+
 class App extends Component{
   render(){
   return (
@@ -82,7 +84,8 @@ params={{
     <div className="text">
         <h1>WELCOME TO DAPP</h1>
         <button className="btn btn-outline-secondary">Get Started</button>
-    </div>
+
+        </div>
     </div>
   );
     }

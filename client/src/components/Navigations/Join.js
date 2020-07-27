@@ -2,7 +2,9 @@ import React from 'react';
 
 const Join = () => {
     return (
-        <div></div>
+        <div>
+            <button type="button" class="btn btn-primary">Primary</button>
+        </div>
     )
 }
 
