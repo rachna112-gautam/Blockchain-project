@@ -1,9 +1,18 @@
+import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Logo from './components/Header/Logo';
+import Language from './components/Header/Languages';
+
+
 import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-particles-js";
 import "./App.css";
+
+
 import Web3 from "web3";
 import MLM from "./contracts/MLM.json";
+
 
 class App extends Component{
 
@@ -73,6 +82,11 @@ class App extends Component{
   render(){
  
   return (
+
+    <div className="main">
+      
+       <Logo></Logo>
+
     <div className="App">
 
     <Particles
@@ -159,6 +173,8 @@ params={{
         >Register
         </button>
     </div>
+        </div>
+
     </div>
   );
     }

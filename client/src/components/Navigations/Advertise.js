@@ -2,7 +2,9 @@ import React from 'react';
 
 const Advertise = () => {
     return (
-        <div></div>
+        <div>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+        </div>
     )
 }
 
