@@ -5,6 +5,9 @@
   top: 40%;
   width: 100%;
 }
+.main{
+  height: 100vh;
+}
 
 .ul-list{
   list-style: none;
