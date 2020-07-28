@@ -1,32 +1,31 @@
 import React, { Component } from "react";
-import "./Logo.css";
-import SettingsIcon from "@material-ui/icons/Settings";
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
-import Button from '@material-ui/core/Button';
-import SearchIcon from '@material-ui/icons/Search';
+
 
 export default class Logo extends Component {
   render() {
     return (
-      <div className="header">
-          <div className="header__back">
-              <Button className="button--back">
-              <KeyboardBackspaceIcon  className="icon--back" />
-              </Button>
-          
-          </div>
-
-          <div>
-              <SearchIcon className="icon--search"></SearchIcon>
-              
-          </div>
-          <p>search User...</p>
-          
-        
-        <div className="header__setting">
-          <SettingsIcon className="icon--setting" />
-        </div>
-      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav ml-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#about">About us<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#work">How it works <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#advantage">Advantages <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
     );
   }
 }
