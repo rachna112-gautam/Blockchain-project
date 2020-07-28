@@ -11,7 +11,7 @@
 
 
 
-  .btn{
+  .reg-btn{
     width: 150px;
     height:50px;
     border-radius:180px;
@@ -25,7 +25,7 @@
 
   }
 
-  .btn:before {
+  .reg-btn:before {
     content:'';
     z-index:1;
     position:absolute;
@@ -40,14 +40,14 @@
     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
   }
 
-  .btn:hover:before {
+  .reg-btn:hover:before {
     opacity:1;
     transition: 0.3s opacity ease-in-out;
     filter:blur(25px);
     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
   }
 
-  .btn:after {
+  .reg-btn:after {
     content:'Register';
     text-align:center;
     line-height:40px;
