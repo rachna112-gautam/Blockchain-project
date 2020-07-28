@@ -89,7 +89,7 @@ class App extends Component{
 params={{
   "particles": {
       "number": {
-      "value": 200,
+      "value": 80,
       "density":{
         enable: true,
         value_area: 1000
@@ -157,14 +157,13 @@ params={{
     >
 
     </Particles>
-    <div className="text"> <Logo></Logo></div>
+    <Logo></Logo>
     <div className="text">
         <h1>WELCOME TO DAPP</h1>
     <p>Total Users in the system {this.state.totalUsers}</p>
         <button className="btn btn-outline-secondary">Get Started</button>
         <input type= "text" name="Id" onChange = {(event)=>{this.setState({Id:event.target.value})}}></input>
         <button className="btn btn-outline-secondary" onClick={(event) => {
-          event.preventDefault()
           this.register(this.state.Id,Web3.utils.toWei("0.01","ether"));
         }}
         >Register
