@@ -1,9 +1,14 @@
-import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Particles from "react-particles-js";
+import Logo from './components/Header/Logo.js';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Web3 from "web3";
 import MLM from "./contracts/MLM.json";
+import { BrowserRouter, Link, Route } from "react-router-dom";
+import Welcome from './components/Home/Welcome';
+import Register from './components/Auth/Register';
+import Particle from './Particles';
 
 class App extends Component {
   async componentWillMount() {
@@ -67,99 +72,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Particles
-          params={{
-            particles: {
-              number: {
-                value: 200,
-                density: {
-                  enable: true,
-                  value_area: 1000,
-                },
-              },
-              color: {
-                value: "#ffffff",
-              },
-              line_linked: {
-                color: "#ffffff",
-              },
-              stroke: {
-                width: 0,
-                color: "#000000",
-              },
-              size: {
-                value: 3,
-              },
-            },
-            move: {
-              enable: true,
-              speed: 12,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200,
-              },
-            },
-            interactivity: {
-              events: {
-                onhover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-                onclick: {
-                  enable: true,
-                  mode: "push",
-                },
-              },
-
-              modes: {
-                grab: {
-                  distance: 800,
-                  line_linked: {
-                    opacity: 1,
-                  },
-                },
-              },
-            },
-            retina_detect: false,
-          }}
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            height: "100%",
-            width: "100%",
-            background: `#17202A `,
-          }}
-        ></Particles>
-        <div className="text">
-          <h1>WELCOME TO DAPP</h1>
-          <p>Total Users in the system {this.state.totalUsers}</p>
-          <button className="btn btn-outline-secondary">Get Started</button>
-          <input
-            type="text"
-            name="Id"
-            onChange={(event) => {
-              this.setState({ Id: event.target.value });
-            }}
-          ></input>
-          <button
-            className="btn btn-outline-secondary"
-            onClick={(event) => {
-              event.preventDefault();
-              this.register(this.state.Id, Web3.utils.toWei("0.01", "ether"));
-            }}
-          >
-            Register
-          </button>
+      <BrowserRouter>
+        <div className="main">
+          <div className="App">
+            <Particle></Particle>
+            <Logo></Logo>
+            <div className="text">
+              <Link to='/' components={Welcome}></Link>
+              <Link to='/register' components={Register}></Link>
+              <Route exact path='/'>  <Welcome /></Route>
+              <Route exact path='/register'><Register /></Route>
+            </div>
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }
