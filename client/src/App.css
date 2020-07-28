@@ -64,3 +64,9 @@
     left:4%;
     background-color:rgb(19, 20, 22);
   }
+
+  .card-body {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
