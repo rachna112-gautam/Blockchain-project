@@ -83,7 +83,7 @@ h1{
 
 }
 
-.home-section, .about-section, .how-section, .ad-section{
+.home-section, .about-section, .how-section, .ad-section, .faq-container{
   text-align: center;
   background-color: #17202a;
   height: 100vh;
@@ -120,7 +120,7 @@ h2{
   line-height: 100%;
   font-weight: bold;
   font-family: Neuron Angled, sans-serif;
-  color: #ffffff;
+  color: black;
   padding: 1rem;
 }
 
