@@ -1,5 +1,5 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import NavBar from "./components/Header/NavBar.js";
+import Header from "./components/Header/Header.js";
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -7,10 +7,10 @@ import Web3 from "web3";
 import MLM from "./contracts/MLM.json";
 import Home from "./components/Sections/Home";
 import Particle from "./Particles";
-import About from "./components/Sections/About";
-import HowItWork from "./components/Sections/HowItWork";
 import Advantage from "./components/Sections/Advantage";
-import Questions from './components/FAQs/Questions';
+import Updation from './components/Sections/Updation';
+import Working from './components/Sections/Working';
+import Question from './components/Sections/Question';
 
 class App extends Component {
   async componentWillMount() {
@@ -75,19 +75,19 @@ class App extends Component {
   render() {
     return (
       <div className="text">
-        <NavBar />
+
         <Particle></Particle>
+        <Header />
         <Particle></Particle>
         <Home />
         <Particle></Particle>
-        <About />
-        <Particle></Particle>
+        <Updation/>
+         <Particle></Particle>
         <Advantage />
         <Particle></Particle>
-        <HowItWork />
+        <Working />
         <Particle></Particle>
-
-        <Questions />
+        <Question />
       </div>
     );
   }
