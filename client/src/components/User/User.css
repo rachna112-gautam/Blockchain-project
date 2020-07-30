@@ -1,0 +1,12 @@
+.user{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+.header{
+  /* display: flex; */
+}
+.userInfo{
+    display: flex;
+    flex-direction: row;
+}
