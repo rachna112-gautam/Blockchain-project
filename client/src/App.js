@@ -1,14 +1,16 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Logo from './components/Header/Logo.js';
+import NavBar from "./components/Header/NavBar.js";
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Web3 from "web3";
 import MLM from "./contracts/MLM.json";
-import { BrowserRouter, Link, Route } from "react-router-dom";
-import Welcome from './components/Home/Welcome';
-import Register from './components/Auth/Register';
-import Particle from './Particles';
+import Home from "./components/Sections/Home";
+import Particle from "./Particles";
+import About from "./components/Sections/About";
+import HowItWork from "./components/Sections/HowItWork";
+import Advantage from "./components/Sections/Advantage";
+import Questions from './components/FAQs/Questions';
 
 class App extends Component {
   async componentWillMount() {
@@ -72,20 +74,21 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <div className="main">
-          <div className="App">
-            <Particle></Particle>
-            <Logo></Logo>
-            <div className="text">
-              <Link to='/' components={Welcome}></Link>
-              <Link to='/register' components={Register}></Link>
-              <Route exact path='/'>  <Welcome /></Route>
-              <Route exact path='/register'><Register /></Route>
-            </div>
-          </div>
-        </div>
-      </BrowserRouter>
+      <div className="text">
+        <NavBar />
+        <Particle></Particle>
+        <Particle></Particle>
+        <Home />
+        <Particle></Particle>
+        <About />
+        <Particle></Particle>
+        <Advantage />
+        <Particle></Particle>
+        <HowItWork />
+        <Particle></Particle>
+
+        <Questions />
+      </div>
     );
   }
 }
